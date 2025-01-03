@@ -1,0 +1,14 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "name": "Cơ bản",
+      "description": "Mới bắt đầu"
+    },
+    {
+      "id": "2",
+      "name": "Nâng cao",
+      "description": "Có nền tảng"
+    }
+  ]
+}
