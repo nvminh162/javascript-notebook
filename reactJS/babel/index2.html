@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const rootElement = document.getElementById('root')
+
+        // function PostItem() {
+        //     return (
+        //         <div className="post-item">
+        //             <img
+        //                 src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541" 
+        //                 alt="This user" 
+        //             />
+        //             <h2 className="post-title">This title</h2>
+        //             <p className="post-desc">This desc</p>
+        //             <p className="post-published">This published</p>
+        //         </div>
+        //     )
+        // }
+
+        class PostItem extends React.Component {
+            render() {
+                return (
+                    <div className="post-item">
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+                            alt="This user"
+                        />
+                        <h2 className="post-title">This title</h2>
+                        <p className="post-desc">This desc</p>
+                        <p className="post-published">This published</p>
+                    </div>
+                )
+            }
+        }
+
+        const postListElement = (
+            <div className="posts-list">
+                <PostItem />
+                <PostItem />
+                <PostItem />
+                <PostItem />
+                <PostItem />
+            </div>
+        );
+
+        const root = ReactDOM.createRoot(rootElement)
+        root.render(postListElement)
+    </script>
+</body>
+
+</html>

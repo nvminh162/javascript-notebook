@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const rootElement = document.getElementById('root')
+
+        function PostItem({image, title, description, publishedAt, callback = () => {}}) {
+            callback(Math.random())
+            return (
+                <div className="post-item">
+                    <img
+                        src={image} 
+                        alt={title}
+                    />
+                    <h2 className="post-title">{title}</h2>
+                    <p className="post-desc">{description}</p>
+                    <p className="post-published">{publishedAt}</p>
+                </div>
+            )
+        }
+
+        const postListElement = (
+            <div className="posts-list">
+                <PostItem 
+                    image='https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541'
+                    title='This title 1'
+                    description='This desc 1'
+                    publishedAt='This published 1'
+                    callback = {random => console.log(random) }
+                />
+                <PostItem 
+                    image='https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541'
+                    title='This title 2'
+                    description='This desc 2'
+                    publishedAt='This published 2'
+                />
+            </div>
+        );
+
+        const root = ReactDOM.createRoot(rootElement)
+        root.render(postListElement)
+    </script>
+</body>
+
+</html>

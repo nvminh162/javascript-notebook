@@ -1,0 +1,34 @@
+<!-- Version 18 and babel
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const container = document.getElementById('root')
+
+        const courses = [
+            { name: 'HTML, CSS' },
+            { name: 'Responsive web design' },
+            { name: 'ReactJS' }
+        ]
+
+        const courseList = <ul>
+            {courses.map((value, index) => <li key={index}>{value.name}</li>)}
+        </ul>
+
+        const root = ReactDOM.createRoot(container)
+        root.render(courseList)
+    </script>
+</body>
+
+</html> -->
