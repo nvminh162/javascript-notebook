@@ -41,7 +41,7 @@ currentPromise
   .catch((err) => {
     console.log(err);
   });
-
+//----------------------------------------------------------------------
 //#3. solving the callback hell problem
 function httpGetAsync2(theUrl, resolve, reject) {
   var xmlHttp = new XMLHttpRequest();
@@ -86,7 +86,7 @@ promise1
   .catch((err) => {
     console.log("Error occurred:", err);
   });
-
+//----------------------------------------------------------------------
 //#4. async / await
 function httpGetAsync3(theUrl, resolve, reject) {
   var xmlHttp = new XMLHttpRequest();
@@ -129,3 +129,4 @@ const executeAsync = async () => {
   }
 };
 executeAsync();
+//----------------------------------------------------------------------
